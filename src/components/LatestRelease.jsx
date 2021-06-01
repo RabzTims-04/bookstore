@@ -5,6 +5,7 @@ import historybooks from '../data/history.json'
 import horrorbooks from '../data/horror.json'
 import romancebooks from '../data/romance.json'
 import scifibooks from '../data/scifi.json'
+import { MDBIcon } from "mdbreact";
 
 
 class LatestRelease extends Component {
@@ -16,9 +17,10 @@ class LatestRelease extends Component {
                     <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
                     <Tab eventKey="fantasy" title="Fantasy">
                     <Row className="justify-content-center">
+                   
                             {
                                 fantasybooks.map((book, i) =>(
-                                    <div  key={book.asin} className="col-12 col-md-12 col-lg-3 p-sm-3">
+                                    <div  key={book.asin} className="col-12 col-md-12 col-lg-3 pt-3">
                                         <Card className ='card' 
                                             style={{ height: '33rem'}} 
                                            
@@ -29,7 +31,26 @@ class LatestRelease extends Component {
                                                 <Card.Text>
                                                 {book.title}
                                                 </Card.Text>
-                                                <h5 className='bookprice'>{book.price}</h5>
+                                               <div className = "d-flex justify-content-between">
+                                                    <div className="d-inline ">
+                                                        <MDBIcon className="d-inline cart" icon="cart-plus" spin size="lg" fixed />                                       
+                                                        <h5 className='bookprice d-inline'>{book.price} $</h5>
+                                                    </div>
+                                                    <div className="pay-icons d-lg-none">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                                    <div className="pay-icons-lg d-none d-lg-flex">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                               </div>    
                                             </Card.Body>
                                             </Card>
                                         </div>
@@ -41,7 +62,7 @@ class LatestRelease extends Component {
                     <Row className="justify-content-center">
                             {
                                 horrorbooks.map((book, i) =>(
-                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 p-sm-3">
+                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 pt-3">
                                         <Card className ='card' 
                                             style={{ height: '33rem'}} 
                                             
@@ -52,7 +73,26 @@ class LatestRelease extends Component {
                                                 <Card.Text>
                                                 {book.title}
                                                 </Card.Text>
-                                                <h5 className='bookprice'>{book.price}</h5>
+                                                <div className = "d-flex justify-content-between">
+                                                    <div className="d-inline ">
+                                                        <MDBIcon className="d-inline cart" icon="cart-plus" spin size="lg" fixed />                                       
+                                                        <h5 className='bookprice d-inline'>{book.price} $</h5>
+                                                    </div>
+                                                    <div className="pay-icons d-lg-none">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                                    <div className="pay-icons-lg d-none d-lg-flex">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                               </div>    
                                             </Card.Body>
                                             </Card>
                                         </div>
@@ -65,7 +105,7 @@ class LatestRelease extends Component {
                     <Row className="justify-content-center">
                             {
                                 scifibooks.map((book, i) =>(
-                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 p-sm-3">
+                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 pt-3">
                                         <Card className ='card' 
                                             style={{ height: '33rem'}} 
                                             
@@ -76,7 +116,26 @@ class LatestRelease extends Component {
                                                 <Card.Text>
                                                 {book.title}
                                                 </Card.Text>
-                                                <h5 className='bookprice'>{book.price}</h5>
+                                                <div className = "d-flex justify-content-between">
+                                                    <div className="d-inline ">
+                                                        <MDBIcon className="d-inline cart" icon="cart-plus" spin size="lg" fixed />                                       
+                                                        <h5 className='bookprice d-inline'>{book.price} $</h5>
+                                                    </div>
+                                                    <div className="pay-icons d-lg-none">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                                    <div className="pay-icons-lg d-none d-lg-flex">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                               </div>    
                                             </Card.Body>
                                             </Card>
                                         </div>
@@ -88,7 +147,7 @@ class LatestRelease extends Component {
                     <Row className="justify-content-center">
                             {
                                 romancebooks.map((book, i) =>(
-                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 p-sm-3">
+                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 pt-3">
                                         <Card className ='card' 
                                             style={{ height: '33rem'}} 
                                             
@@ -99,7 +158,26 @@ class LatestRelease extends Component {
                                                 <Card.Text>
                                                 {book.title}
                                                 </Card.Text>
-                                                <h5 className='bookprice'>{book.price}</h5>
+                                                <div className = "d-flex justify-content-between">
+                                                    <div className="d-inline ">
+                                                        <MDBIcon className="d-inline cart" icon="cart-plus" spin size="lg" fixed />                                       
+                                                        <h5 className='bookprice d-inline'>{book.price} $</h5>
+                                                    </div>
+                                                    <div className="pay-icons d-lg-none">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                                    <div className="pay-icons-lg d-none d-lg-flex">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                               </div>    
                                             </Card.Body>
                                             </Card>
                                         </div>
@@ -111,9 +189,9 @@ class LatestRelease extends Component {
                     <Row className="justify-content-center">
                             {
                                 historybooks.map((book, i) =>(
-                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 p-sm-3">
+                                    <div key={book.asin} className="col-12 col-md-12 col-lg-3 pt-3">
                                         <Card className ='card' 
-                                            style={{ height: '33rem'}} 
+                                            style={{ height: '33rem'}}
                                             
                                             >
                                             <Card.Img className="img-fluid" style={{ height: '20rem' }} variant="top" src={book.img}/>
@@ -122,7 +200,26 @@ class LatestRelease extends Component {
                                                 <Card.Text>
                                                 {book.title}
                                                 </Card.Text>
-                                                <h5 className='bookprice'>{book.price}</h5>
+                                                <div className = "d-flex justify-content-between">
+                                                    <div className="d-inline ">
+                                                        <MDBIcon className="d-inline cart" icon="cart-plus" spin size="lg" fixed />                                       
+                                                        <h5 className='bookprice d-inline'>{book.price} $</h5>
+                                                    </div>
+                                                    <div className="pay-icons d-lg-none">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                                    <div className="pay-icons-lg d-none d-lg-flex">
+                                                    <MDBIcon className="pr-2" fab icon="cc-visa" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-paypal" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-mastercard" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-apple-pay" size="lg"/>
+                                                    <MDBIcon className="pr-2" fab icon="cc-amazon-pay" size="lg"/>
+                                                    </div>
+                                               </div>    
                                             </Card.Body>
                                             </Card>
                                         </div>
